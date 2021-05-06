@@ -39,5 +39,5 @@ long int Process::UpTime() const { return pid_; }
 
 bool Process::operator<(Process const& a) const
 {
-    return cpu_utilization_ < a.cpu_utilization_;
+    return cpu_utilization_ > a.cpu_utilization_;
 }

@@ -36,6 +36,7 @@ vector<Process> System::Processes() {
     processes.emplace_back(pid, user, command, cpu_utilization, ram, uptime);
   }
 
+  std::sort(processes.begin(), processes.end());
   return processes;
 }
 
