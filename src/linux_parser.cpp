@@ -358,7 +358,7 @@ long LinuxParser::UpTime(int pid) {
       {
         starttime = std::stol(token);
         long hertz = sysconf(_SC_CLK_TCK);
-        return starttime / hertz;
+        return UpTime() - (starttime / hertz);
       }
     }
   }
